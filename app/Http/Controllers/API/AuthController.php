@@ -21,7 +21,7 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => 'required|min:2',
-            'email' => 'required|email|unique:users,id',
+            'email' => 'required|email|unique',
             'password' => 'required|min:8|confirmed',
         ], [
             'required' => 'inputan: attribute harus diisi tidak boleh kosong',
